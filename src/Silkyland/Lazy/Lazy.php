@@ -70,11 +70,15 @@ class Lazy
     {
         $this->file = $file;
         $this->savePath = $savePath;
-        $this->filePath = public_path($this->savePath);
+        if (function_exists('public_path')) {
+            $this->filePath = public_path($this->savePath);
+        } else {
+            $this->filePath = __DIR__ . '/' . $savePath;
+        }
+
         if (!File::exists($this->filePath)) {
             File::makeDirectory($this->filePath);
         }
-
         $this->generateNewName();
     }
 
