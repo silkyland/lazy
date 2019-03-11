@@ -114,7 +114,7 @@ class Lazy
     }
 
     /**
-     * @param string $option
+     * @param string $option = '' ? 'aspect'
      */
     public function resize($option = '')
     {
