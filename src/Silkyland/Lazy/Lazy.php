@@ -2,7 +2,7 @@
 
 namespace Silkyland\Lazy;
 
-use Intervention\Image\File;
+use Illuminate\Support\Facades\File;
 use Intervention\Image\Image;
 use Carbon\Carbon;
 
