@@ -2,7 +2,9 @@
 
 namespace Silkyland\Lazy;
 
+use Illuminate\Container\Container;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Facade;
 use Intervention\Image\Facades\Image;
 use Carbon\Carbon;
 
@@ -10,6 +12,11 @@ use Carbon\Carbon;
  * Class Lazy
  * @package Silkyland\Lazy
  */
+$app = new Container();
+$app->singleton('app', 'Illuminate\Container\Container');
+Facade::setFacadeApplication($app);
+
+
 class Lazy
 {
     /**
