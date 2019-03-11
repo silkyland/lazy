@@ -13,7 +13,7 @@ Simply add a dependency on silkyland/lazy to your project's composer.json file i
 ```json
 {
   "require-dev": {
-    "silkyland/lazy": "0.1*"
+    "silkyland/lazy": "^1.0.6"
   }
 }
 ```
